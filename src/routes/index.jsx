@@ -5,6 +5,7 @@ import Error404 from "../pages/404";
 import About from "../pages/about";
 import CreateAiImage from "../pages/createAiImage";
 import Login from "../pages/login";
+import Signup from "../pages/signup";
 
 const Routers = () => {
   return (
@@ -12,9 +13,10 @@ const Routers = () => {
       <BrowserRouter>
         <Routes>
           <Route index element={<Homepage />} />
-          <Route path="product" element={<CreateAiImage />} />
-          <Route path="pricing" element={<About />} />
+          <Route path="createAiImage" element={<CreateAiImage />} />
+          <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
+          <Route path="signUp" element={<Signup />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>

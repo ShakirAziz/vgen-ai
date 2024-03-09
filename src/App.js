@@ -1,7 +1,12 @@
+import { Box } from "@mui/material";
 import Routers from "./routes";
 
 function App() {
-  return <Routers></Routers>;
+  return (
+    <Box>
+      <Routers />
+    </Box>
+  );
 }
 
 export default App;
