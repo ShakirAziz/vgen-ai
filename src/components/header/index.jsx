@@ -1,9 +1,9 @@
 import { Avatar, Box, Icon, Typography } from "@mui/material";
 import React from "react";
-import logo from "../../assets/logo/Logo.png";
-import BtnIcon from "../../assets/icon/magic.png";
+import logo from "../../Assets/logo/Logo.png";
+import BtnIcon from "../../Assets/icon/magic.png";
 import Button from "../button/index";
-import avatar from "../../assets/logo/Logo.png";
+// import avator from "../../Assets/logo/Logo.png";
 import { makeStyles } from "@mui/styles";
 
 const Header = () => {
@@ -51,9 +51,10 @@ export default Header;
 const useStyles = makeStyles({
   mainContainer: {
     display: "flex",
-    justifyContent: "space-between",
+    width: "100rem",
+    justifyContent: "space-between ",
     alignItems: "center",
-    backgroundColor: "#0A0F20",
+    backgroundColor: "transparent",
     padding: "0.8em 3em",
     flexWrap: "wrap",
     columnGap: "3rem",

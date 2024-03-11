@@ -1,7 +1,13 @@
 import React from "react";
+import Burner from "../../components/burnerportion";
+import { Box } from "@mui/material";
 
 const Homepage = () => {
-  return <div><p>This is home page</p></div>;
+  return (
+    <Box>
+      <Burner />
+    </Box>
+  );
 };
 
 export default Homepage;
