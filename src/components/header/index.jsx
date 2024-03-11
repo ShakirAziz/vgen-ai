@@ -51,7 +51,7 @@ export default Header;
 const useStyles = makeStyles({
   mainContainer: {
     display: "flex",
-    width: "100rem",
+    width: "100%",
     justifyContent: "space-between ",
     alignItems: "center",
     backgroundColor: "transparent",
