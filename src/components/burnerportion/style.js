@@ -1,12 +1,10 @@
 import { makeStyles } from "@mui/styles";
-import imageone from "../../assets/images/backgroundimage.png";
+
 export const useStyles = makeStyles((theme) => ({
   main: {
-    backgroundImage: `url(${imageone})`,
     display: "flex",
     alignItems: "center",
     boxShadow: "  0 1.3px 4px -1px rgba(101, 96, 139, 0.2)",
-    // height: "321.43px",
     flexDirection: "column",
   },
   heading: {
