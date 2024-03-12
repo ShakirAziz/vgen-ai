@@ -2,7 +2,7 @@ import { Avatar, Box, Icon } from "@mui/material";
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import logo from "../../assets/logo/Logo.png";
-import BtnIcon from "../../assets/icon/magic.png";
+import BtnIcon from "../../assets/icons/magic.png";
 import Button from "../button/index";
 import { Link } from "react-router-dom";
 
