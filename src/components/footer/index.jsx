@@ -1,12 +1,45 @@
 import React from "react";
+import { Box, Typography } from "@mui/material";
+import logo from "../../Assets/logo/Logo.png";
+import { makeStyles } from "@mui/styles";
 
 const Footer = () => {
+  const classes = useStyles();
   return (
-    <div>
-      {" "}
-      <p>This is footer component</p>
-    </div>
+    <Box className={classes.mainContainer}>
+      <Box className={classes.logo}>
+        <img width="80px" src={logo} alt="logo" />
+      </Box>
+      <Box className={classes.para}>
+        {" "}
+        <Typography>VGENAI Ltd © 2024</Typography>
+      </Box>
+    </Box>
   );
 };
 
 export default Footer;
+const useStyles = makeStyles({
+  mainContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "#130A2D",
+    boxShadow: "  0 1.3px 4px -1px rgba(101, 96, 139, 0.2)",
+    padding: "0.2em 2em",
+    flexWrap: "wrap",
+  },
+  logo: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  para: {
+    color: "rgba(153, 153, 153, 1)",
+    fontFamily: "Montserrat!important",
+    fontWeight: "400!important",
+    fontSize: "9px!important",
+  },
+});
