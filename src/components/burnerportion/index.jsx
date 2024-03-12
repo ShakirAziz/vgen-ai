@@ -3,13 +3,11 @@ import React from "react";
 import { useStyles } from "./style";
 import Button from "../button";
 import magicbutton from "../../assets/icons/Vector (1).svg";
-import Header from "../header";
 
 const Burner = () => {
   const classes = useStyles();
   return (
     <Box className={classes.main}>
-      <Header />
       <Box
         sx={{
           display: "flex",
