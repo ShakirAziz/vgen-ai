@@ -25,12 +25,9 @@ const useStyles = makeStyles({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    borderTop: "0.756px solid var(--pixlr-com-black-10, rgba(0, 0, 0, 0.10))", // Corrected syntax
-    background: "var(--pixlr-com-black-22, rgba(0, 0, 0, 0.22))", // Corrected syntax
     padding: "0.2em 2em",
     flexWrap: "wrap",
   },
-
   logo: {
     display: "flex",
     flexDirection: "column",
