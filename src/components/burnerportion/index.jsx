@@ -3,6 +3,7 @@ import React from "react";
 import { useStyles } from "./style";
 import Button from "../button";
 import magicbutton from "../../assets/icons/Vector (1).svg";
+import { Link } from "react-router-dom";
 
 const Burner = () => {
   const classes = useStyles();
@@ -26,12 +27,13 @@ const Burner = () => {
           directly in your web browser, on your smartphone, or on your desktop,
           all free. The only limit is your imagination!
         </Typography>
-        <Button className={classes.button}>
-          <img src={magicbutton} alt="magicimage" />
-          <Typography className={classes.buttontext}>
-            {" "}
-            AI Image Generator
-          </Typography>
+        <Button
+          className={classes.button}
+          component={Link}
+          to="/createAiImage"
+          startIcon={<img src={magicbutton} alt="magicimage" />}
+        >
+          Ai Image Generator
         </Button>
       </Box>
     </Box>
