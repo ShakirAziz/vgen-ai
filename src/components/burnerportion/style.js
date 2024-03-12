@@ -36,7 +36,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   button: {
     display: "flex",
-    gap: " 7.563px",
+    gap: "7.563px",
     marginBottom: "40px !important",
     justifyContent: "center",
     background:
@@ -45,12 +45,13 @@ export const useStyles = makeStyles((theme) => ({
     borderRadius: "37.82px !important",
     border:
       "0.756px solid var(--pixlr-com-amethyst-34, rgba(150, 92, 201, 0.34)) !important",
-  },
-  buttontext: {
+    color: "var(--pixlr-com-nero-80, rgba(255, 255, 255, 0.80)) !important",
+    textAlign: "center",
     fontFamily: "Montserrat",
+    textTransform: "capitalize !important",
+    fontSize: "12.857px",
+    fontStyle: "normal",
     fontWeight: 400,
-    fontSize: "12.86px",
-    color: "var(--pixlr-com-nero-80, rgba(255, 255, 255, 0.80))",
-    textTransform: "capitalize",
+    lineHeight: "18.151px" /* 141.176% */,
   },
 }));
