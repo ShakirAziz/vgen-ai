@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
-import imageone from "../../Assets/images/backgroundimage.png";
-export const useStyles = makeStyles(theme => ({
+import imageone from "../../assets/images/backgroundimage.png";
+export const useStyles = makeStyles((theme) => ({
   main: {
     backgroundImage: `url(${imageone})`,
     display: "flex",
