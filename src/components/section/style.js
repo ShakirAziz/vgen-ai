@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import imageone from "../../Assets/images/backgroundimage.png";
 export const useStyles = makeStyles((theme) => ({
   main: {
     backgroundColor: "#150C30",
