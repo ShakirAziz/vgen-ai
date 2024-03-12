@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import { useStyles } from "./style";
 import Button from "../button";
-import magicbutton from "../../Assets/icons/Vector (1).svg";
+import magicbutton from "../../assets/icons/Vector (1).svg";
 
 const Burner = () => {
   const classes = useStyles();
