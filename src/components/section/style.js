@@ -2,12 +2,8 @@ import { makeStyles } from "@mui/styles";
 // import imageone from "../../Assets/images/backgroundimage.png";
 export const useStyles = makeStyles((theme) => ({
   main: {
-    backgroundColor: "#150C30",
-    boxShadow: "  0 1.3px 4px -1px rgba(101, 96, 139, 0.2)",
     display: "flex",
     alignItems: "center",
-
-    // gap: "1rem",
     height: "321.43px",
     flexDirection: "column",
     justifyContent: "center",
