@@ -8,7 +8,7 @@ const Layout = () => {
       <Box
         sx={{
           background:
-            "var(--pixlr-com-ebony-radial-portage-portage, radial-gradient(40% 40% at 58% 20%, rgba(119, 138, 232, 0.30) 0%, rgba(119, 138, 232, 0.00) 100%), #0A0F20)",
+            "var(--pixlr-com-ebony-radial-portage-portage, radial-gradient(40% 40% at 60% 20%, rgba(119, 138, 232, 0.25) 0%, rgba(119, 138, 232, 0) 80%), #0A0F20)",
         }}
       >
         <Header />
