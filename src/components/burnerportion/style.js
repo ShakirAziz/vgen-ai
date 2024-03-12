@@ -4,7 +4,6 @@ export const useStyles = makeStyles((theme) => ({
   main: {
     display: "flex",
     alignItems: "center",
-    boxShadow: "  0 1.3px 4px -1px rgba(101, 96, 139, 0.2)",
     flexDirection: "column",
   },
   heading: {
