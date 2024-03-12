@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles((theme) => ({
   main: {
     backgroundColor: "#150C30",
-    // boxShadow: "  0 1.3px 4px -1px rgba(101, 96, 139, 0.2)",
+    boxShadow: "  0 1.3px 4px -1px rgba(101, 96, 139, 0.2)",
     display: "flex",
     alignItems: "center",
 
