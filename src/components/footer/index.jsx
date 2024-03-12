@@ -25,11 +25,12 @@ const useStyles = makeStyles({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "#130A2D",
-    boxShadow: "  0 1.3px 4px -1px rgba(101, 96, 139, 0.2)",
+    borderTop: "0.756px solid var(--pixlr-com-black-10, rgba(0, 0, 0, 0.10))", // Corrected syntax
+    background: "var(--pixlr-com-black-22, rgba(0, 0, 0, 0.22))", // Corrected syntax
     padding: "0.2em 2em",
     flexWrap: "wrap",
   },
+
   logo: {
     display: "flex",
     flexDirection: "column",
