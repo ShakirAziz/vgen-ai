@@ -12,12 +12,17 @@ const FormBase = ({
   linkTo,
   LinkDesc,
   inputFields,
+  handleSubmit,
 }) => {
   const classes = useStyles();
   return (
     <Paper elevation={4} className={classes.formContainer}>
       <Typography className={classes.formCaption}>{title}</Typography>
-      <form className={classes.formBase} autoComplete="off">
+      <form
+        className={classes.formBase}
+        autoComplete="off"
+        onSubmit={handleSubmit}
+      >
         {inputFields.map((value, index) => (
           <InputBase
             key={index}
@@ -26,11 +31,15 @@ const FormBase = ({
             type={value.type}
             value={value.value}
             onChange={value.onChange}
+            error={value.error}
+            helperText={value.helperText}
+            onBlur={value.onBlur}
           />
         ))}
-
         <Box className={classes.formActions}>
-          <Button variant="contained">{buttonText}</Button>
+          <Button variant="contained" onClick={(e) => console.log("submited")}>
+            {buttonText}
+          </Button>
           <Stack direction="row" gap={1} justifyContent="center">
             <Typography>{LinkDesc}</Typography>
             <Link to={linkTo}>{linkText}</Link>

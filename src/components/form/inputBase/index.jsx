@@ -9,7 +9,7 @@ const InputBase = ({ ...props }) => {
         variant="outlined"
         fullWidth
         size="medium"
-        autoComplete="false"
+        autoComplete="off"
         sx={{
           border: "1px solid #fff",
           borderRadius: "5px",
