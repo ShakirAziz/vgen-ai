@@ -21,6 +21,7 @@ const Footer = () => {
 export default Footer;
 const useStyles = makeStyles({
   mainContainer: {
+    backgroundColor: "#0A0F20",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
