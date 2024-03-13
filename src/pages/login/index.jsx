@@ -3,25 +3,29 @@ import React from "react";
 import FormBase from "../../components/form/formBase";
 import { useFormik } from "formik";
 import { loginSchema } from "../../schemas";
+import { useNavigate } from "react-router";
 
 const Login = () => {
+  const navigate = useNavigate();
   const formik = useFormik({
+    enableReinitialize: true,
     initialValues: {
       email: "",
       password: "",
     },
     validationSchema: loginSchema,
-    validateOnChange: true,
-    validateOnBlur: false,
     onSubmit: (values, action) => {
-      alert(JSON.stringify(values, null, 2));
+      // console.log("Current Values:", values);
+      const user = { email: "example@example.com", password: "password123" };
+      if (values.email === user.email && values.password === user.password) {
+        navigate("/");
+      } else {
+        alert("Invalid email or password");
+      }
       action.resetForm();
     },
   });
-
-  // Log initial values
-  console.log("Initial Values:", formik.initialValues);
-
+  console.log(formik.values);
   return (
     <Box sx={{ backgroundColor: "#13082A" }}>
       <Box
@@ -39,7 +43,7 @@ const Login = () => {
           LinkDesc="Don't have an account?"
           linkText="Sign Up"
           linkTo="/signUp"
-          handleSubmit={formik.handleSubmit} 
+          handleSubmit={formik.handleSubmit}
           inputFields={[
             {
               id: "email",
@@ -54,7 +58,7 @@ const Login = () => {
             },
             {
               id: "password",
-              name: "password", // Remove the extra space
+              name: "password",
               type: "password",
               label: "Password",
               error: formik.touched.password && Boolean(formik.errors.password),

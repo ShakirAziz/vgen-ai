@@ -37,7 +37,11 @@ const FormBase = ({
           />
         ))}
         <Box className={classes.formActions}>
-          <Button variant="contained" onClick={(e) => console.log("submited")}>
+          <Button
+            variant="contained"
+            type="submit"
+            onClick={(e) => console.log("submited")}
+          >
             {buttonText}
           </Button>
           <Stack direction="row" gap={1} justifyContent="center">
