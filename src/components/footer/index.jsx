@@ -28,7 +28,11 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     padding: "0.2em 2em",
     flexWrap: "wrap",
+    borderTop:
+      "0.756px solid var(--pixlr-com-black-10, rgba(0, 0, 0, 0.10)) !important",
+    background: "var(--pixlr-com-black-22, rgba(0, 0, 0, 0.22)) !important",
   },
+
   logo: {
     display: "flex",
     flexDirection: "column",
