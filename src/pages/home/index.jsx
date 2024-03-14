@@ -3,6 +3,7 @@ import Burner from "../../components/burnerportion";
 import { Box } from "@mui/material";
 import Section from "../../components/section";
 import Header from "../../components/header";
+import ImagePortion from "../../components/imagesportion";
 
 const Homepage = () => {
   return (
@@ -14,7 +15,9 @@ const Homepage = () => {
     >
       <Header />
       <Burner />
+
       <Section />
+      <ImagePortion />
     </Box>
   );
 };
