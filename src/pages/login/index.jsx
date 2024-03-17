@@ -15,7 +15,6 @@ const Login = () => {
     },
     validationSchema: loginSchema,
     onSubmit: (values, action) => {
-      // console.log("Current Values:", values);
       const user = { email: "example@example.com", password: "password123" };
       if (values.email === user.email && values.password === user.password) {
         navigate("/");
