@@ -1,9 +1,9 @@
-import { Box } from "@mui/material";
 import React from "react";
 import FormBase from "../../components/form/formBase";
 import { useFormik } from "formik";
 import { loginSchema } from "../../schemas";
 import { useNavigate } from "react-router";
+import { Box } from "@mui/material";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -55,6 +55,7 @@ const Login = () => {
               onChange: formik.handleChange,
               onBlur: formik.handleBlur,
             },
+
             {
               id: "password",
               name: "password",
