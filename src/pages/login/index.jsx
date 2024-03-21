@@ -1,9 +1,9 @@
-import { Box } from "@mui/material";
 import React from "react";
 import FormBase from "../../components/form/formBase";
 import { useFormik } from "formik";
 import { loginSchema } from "../../schemas";
 import { useNavigate } from "react-router";
+import { Box } from "@mui/material";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,7 +15,6 @@ const Login = () => {
     },
     validationSchema: loginSchema,
     onSubmit: (values, action) => {
-      // console.log("Current Values:", values);
       const user = { email: "example@example.com", password: "password123" };
       if (values.email === user.email && values.password === user.password) {
         navigate("/");
@@ -56,6 +55,7 @@ const Login = () => {
               onChange: formik.handleChange,
               onBlur: formik.handleBlur,
             },
+
             {
               id: "password",
               name: "password",
