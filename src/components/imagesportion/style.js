@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles(theme => ({
+export const useStyles = makeStyles((theme) => ({
   maincontainer: {
     display: "flex",
     flexWrap: "wrap",
@@ -39,11 +39,11 @@ export const useStyles = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: 400 + "important",
     lineWeight: "18.151px !important",
-    width: "603.079px ",
+    width: "550.079px ",
   },
   imagecontainer: {
     height: "30rem",
-    width: "50rem",
+    width: "42.3rem",
     alignItems: "center",
     display: "flex",
     position: "relative",

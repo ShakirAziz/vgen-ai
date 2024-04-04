@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import { useStyles } from "./style";
 import Button from "../button";
-import magicbutton from "../../Assets/icons/magic.png";
+import magicbutton from "../../assets/icons/magic.png";
 import { Link } from "react-router-dom";
 
 const Burner = () => {
