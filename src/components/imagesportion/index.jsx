@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { useStyles } from "./style";
-import catpic from "../../Assets/images/Cat.png";
-import dogpic from "../../Assets/images/Dog.png";
-import horsepic from "../../Assets/images/Horse.png";
+import catpic from "../../assets/images/Cat.png";
+import dogpic from "../../assets/images/Dog.png";
+import horsepic from "../../assets/images/Horse.png";
 
 function ImagePortion() {
   const [isHovered, setIsHovered] = useState(false);
