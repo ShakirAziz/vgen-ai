@@ -4,6 +4,7 @@ import { Box, Paper, Stack, Typography } from "@mui/material";
 import InputBase from "../inputBase";
 import Button from "../../button";
 import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 
 const FormBase = ({
   title,
@@ -40,10 +41,20 @@ const FormBase = ({
           <Button
             variant="contained"
             type="submit"
-            onClick={(e) => console.log("submited")}
+            onClick={e => console.log("submited")}
           >
             {buttonText}
           </Button>
+          <Typography className={classes.middleText}>OR</Typography>
+          <Button
+            className={classes.button}
+            component={Link}
+            to="/"
+            startIcon={<FcGoogle />}
+          >
+            Sign in with Google
+          </Button>
+
           <Stack direction="row" gap={1} justifyContent="center">
             <Typography>{LinkDesc}</Typography>
             <Link to={linkTo}>{linkText}</Link>
@@ -56,7 +67,7 @@ const FormBase = ({
 
 export default FormBase;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   formContainer: {
     padding: "2rem",
     textAlign: "center",
@@ -78,5 +89,16 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     gap: "0.5rem",
+  },
+  button: {
+    border: "2px solid #00000085 !important",
+    borderRadius: "20px !important",
+    textDecoration: "none !important",
+    color: "black !important",
+    fontSize: "15px !important",
+    textTransform: "none !important",
+  },
+  middleText: {
+    margin: "10px 0px !important",
   },
 }));
