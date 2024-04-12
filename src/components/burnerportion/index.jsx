@@ -23,9 +23,11 @@ const Burner = () => {
           AI Image Generator
         </Typography>
         <Typography className={classes.paragraph}>
-          The suite for all your creative photo and design editing needs
-          directly in your web browser, on your smartphone, or on your desktop,
-          all free. The only limit is your imagination!
+          Transforming Ideas into Visual Masterpieces. Harness the power of
+          artificial intelligence to create stunning images effortlessly.
+          Customize styles, colors, and elements to bring your vision to life.
+          Perfect for content creators, marketers, and educators. Elevate your
+          visual storytelling with ease!
         </Typography>
         <Button
           className={classes.button}
