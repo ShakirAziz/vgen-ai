@@ -2,31 +2,39 @@ import React from "react";
 import FormBase from "../../components/form/formBase";
 import { useFormik } from "formik";
 import { loginSchema } from "../../schemas";
-import { useNavigate } from "react-router";
-import { Box } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { Box, Link } from "@mui/material";
 
 const Login = () => {
   const navigate = useNavigate();
+
   const formik = useFormik({
-    enableReinitialize: true,
     initialValues: {
       email: "",
       password: "",
     },
     validationSchema: loginSchema,
-    onSubmit: (values, action) => {
+    onSubmit: (values, { resetForm }) => {
       const user = { email: "example@example.com", password: "password123" };
       if (values.email === user.email && values.password === user.password) {
         navigate("/");
       } else {
         alert("Invalid email or password");
       }
-      action.resetForm();
+      resetForm();
     },
   });
-  console.log(formik.values);
+
   return (
-    <Box sx={{ backgroundColor: "#13082A" }}>
+    <Box
+      sx={{
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "120vh",
+      }}
+    >
       <Box
         sx={{
           position: "absolute",
@@ -34,6 +42,7 @@ const Login = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           width: "25%",
+          zIndex: 1, // Set a higher z-index for the form box
         }}
       >
         <FormBase
@@ -55,7 +64,6 @@ const Login = () => {
               onChange: formik.handleChange,
               onBlur: formik.handleBlur,
             },
-
             {
               id: "password",
               name: "password",
@@ -69,6 +77,11 @@ const Login = () => {
             },
           ]}
         />
+      </Box>
+      <Box sx={{ textAlign: "center", zIndex: 2, mt: 55 }}>
+        <Link href="/forgotPassword" sx={{ color: "#000000" }}>
+          Forgot Password?
+        </Link>
       </Box>
     </Box>
   );

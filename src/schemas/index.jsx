@@ -12,7 +12,14 @@ export const loginSchema = Yup.object({
 });
 
 export const signUpSchema = Yup.object({
-  name: Yup.string().min(2).max(25).required("Please enter your name"),
+  firstName: Yup.string()
+    .min(2)
+    .max(25)
+    .required("Please enter your first Name "),
+  LastName: Yup.string()
+    .min(2)
+    .max(25)
+    .required("Please enter your Last Name "),
   email: Yup.string()
     .email("Invalid email address")
     .required("Please enter your email"),
