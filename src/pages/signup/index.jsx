@@ -7,7 +7,8 @@ import { signUpSchema } from "../../schemas";
 const Signup = () => {
   const formik = useFormik({
     initialValues: {
-      name: "",
+      firstName: "",
+      LastName: "",
       email: "",
       password: "",
     },
@@ -38,13 +39,24 @@ const Signup = () => {
         handleSubmit={formik.handleSubmit}
         inputFields={[
           {
-            id: "name",
-            name: "name",
+            id: "firstName",
+            name: "firstName",
             type: "text",
-            label: "Name",
-            error: formik.touched.name && Boolean(formik.errors.name),
-            helperText: formik.touched.name && formik.errors.name,
-            value: formik.values.name,
+            label: "First Name",
+            error: formik.touched.firstName && Boolean(formik.errors.firstName),
+            helperText: formik.touched.firstName && formik.errors.firstName,
+            value: formik.values.firstName,
+            onChange: formik.handleChange,
+            onBlur: formik.handleBlur,
+          },
+          {
+            id: "LastName",
+            name: "LastName",
+            type: "text",
+            label: "Last Name",
+            error: formik.touched.LastName && Boolean(formik.errors.LastName),
+            helperText: formik.touched.LastName && formik.errors.LastName,
+            value: formik.values.LastName,
             onChange: formik.handleChange,
             onBlur: formik.handleBlur,
           },
