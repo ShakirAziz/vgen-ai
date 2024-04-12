@@ -6,12 +6,13 @@ const Section = () => {
   const classes = useStyles();
   return (
     <Box className={classes.main}>
-      <Typography className={classes.heading}>Generative ai tools</Typography>
+      <Typography className={classes.heading}>Generative ai tool</Typography>
       <Typography className={classes.description}>
-        Explore Pixlr’s new AI Powered Generative Tools unleashing limitless
-        creative possibilities. Perfect for both beginners and seasoned
-        professionals, these tools redefine artistic expression with intuitive
-        AI technology, revolutionizing your creative process.
+        Introducing VGenAI's cutting-edge Generative AI Tool! Dive into a world
+        of endless creative possibilities with our intuitive AI-powered feature.
+        Whether you're a novice or a seasoned pro, our tool is designed to
+        redefine artistic expression, revolutionizing your creative process.
+        Explore the future of creativity with VGenAI today!
       </Typography>
     </Box>
   );

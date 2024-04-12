@@ -11,14 +11,14 @@ const About = () => {
       <Box className={classes.mainContainer}>
         <Typography className={classes.title}>About VGENAI!</Typography>
         <Box className={classes.para}>
-          Pixlr.com was launched in the late summer of 2008 as an online image
-          editing tool developed by Ola Sevandersson. Initially offering a
-          web-based platform for basic photo editing, it quickly gained
-          popularity due to its user-friendly interface and accessible features.
-          As Pixlr evolves, it infuses AI into the platform to make user’s
-          creative process faster, smarter, and easier. Explore a world where
-          your imagination has no limits, and every creative artwork is a
-          possibility.
+          Welcome to VGenAI, where words come to life through visuals! Our
+          platform transforms text into stunning images, offering a seamless
+          creative outlet for expressing ideas. With customizable designs,
+          diverse styles, and easy sharing options, VGenAI empowers users across
+          various domains to effortlessly create and share visually captivating
+          content. Whether you're a content creator, marketer, educator, or
+          simply someone who appreciates creativity, join us and unlock the
+          power of visual storytelling today!
         </Box>
       </Box>
     </>

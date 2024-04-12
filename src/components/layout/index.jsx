@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import Footer from "../footer";
 const Layout = () => {
   return (
-    <Box sx={{ backgroundColor: "#13082A" }}>
+    <Box sx={{ backgroundColor: "#0A0F20" }}>
       <Box>
         <Box
           sx={{

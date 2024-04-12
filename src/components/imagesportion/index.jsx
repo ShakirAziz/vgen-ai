@@ -26,11 +26,12 @@ function ImagePortion() {
           AI Image Generator magic!
         </Typography>
         <Typography className={classes.paragraph}>
-          Elevate your creations with the revolutionary Text to Image AI image
-          generator, revolutionizing the way you convert simple text into
-          visually captivating artwork. Unleash your imagination and craft
-          breathtaking, AI-generated masterpieces that are bound to captivate
-          and inspire your audience.
+          Experience the magic of VGenAI's innovative Text-to-Image AI tool,
+          revolutionizing the process of turning words into captivating visuals.
+          Immerse yourself in a world of creativity and craft remarkable,
+          AI-generated artwork that will captivate and inspire your audience.
+          Join us on a journey of artistic discovery with VGenAI's cutting-edge
+          technology today!
         </Typography>
       </Box>
 
