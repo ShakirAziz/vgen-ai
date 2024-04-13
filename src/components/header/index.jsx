@@ -68,7 +68,7 @@ const useStyles = makeStyles({
     columnGap: "3rem",
     fontFamily: "Montserrat !important",
     fontWeight: "900 !important",
-    position: "sticky",
+
     top: 0,
   },
   innerContainer: {
