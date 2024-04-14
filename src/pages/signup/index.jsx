@@ -2,33 +2,30 @@ import React from "react";
 import FormBase from "../../components/form/formBase";
 import { Box } from "@mui/material";
 import { useFormik } from "formik";
-import { signUpSchema } from "../../schemas";
-import axios from "axios"; // Import Axios for HTTP requests
+import axios from "axios";
 
-const Signup = () => {
+const Signup = ({ history }) => {
+  // Receive history as prop
   const formik = useFormik({
     initialValues: {
       firstName: "",
-      lastName: "", // Corrected typo here
+      lastName: "",
       email: "",
       password: "",
     },
-    validationSchema: signUpSchema,
-    validateOnChange: true,
-    validateOnBlur: false,
-    onSubmit: async (values, action) => {
+    onSubmit: async (values, { resetForm, setSubmitting }) => {
       try {
-        // Send form data to backend
         const response = await axios.post(
-          "http://localhost:3000/api/signUP",
+          "http://localhost:3000/api/signUp",
           values
-        ); // Assuming your backend API endpoint is /api/signup
-        console.log("Response:", response); // Log response from server
-        alert("Signup successful!"); // Show success message
-        action.resetForm(); // Reset the form
+        );
+        console.log("Response:", response);
+        alert("Signup successful!");
+        resetForm();
+        history.push("/login"); // Redirect to login page
       } catch (error) {
-        console.error("Error:", error); // Log any errors
-        alert("Signup failed. Please try again."); // Show error message
+        console.error("Error:", error.response.data.message);
+        alert("Signup failed: " + error.response.data.message);
       }
     },
   });
@@ -63,13 +60,13 @@ const Signup = () => {
             onBlur: formik.handleBlur,
           },
           {
-            id: "lastName", // Corrected typo here
-            name: "lastName", // Corrected typo here
+            id: "lastName",
+            name: "lastName",
             type: "text",
             label: "Last Name",
-            error: formik.touched.lastName && Boolean(formik.errors.lastName), // Corrected typo here
-            helperText: formik.touched.lastName && formik.errors.lastName, // Corrected typo here
-            value: formik.values.lastName, // Corrected typo here
+            error: formik.touched.lastName && Boolean(formik.errors.lastName),
+            helperText: formik.touched.lastName && formik.errors.lastName,
+            value: formik.values.lastName,
             onChange: formik.handleChange,
             onBlur: formik.handleBlur,
           },

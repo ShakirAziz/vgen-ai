@@ -11,7 +11,7 @@ const ImageGenerator = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [randomImageUrl, setRandomImageUrl] = useState("");
-  const [showEmojiPicker, setShowEmojiPicker] = useState(false); // State to control emoji picker visibility
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 
   useEffect(() => {
     fetchRandomImage();
@@ -31,12 +31,12 @@ const ImageGenerator = () => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const response = await axios.GET(
+      const response = await axios.post(
         "http://localhost:3000/api/text-to-image",
-        { prompt }
+        { prompt: prompt } // Send the 'prompt' data as the request body
       );
       setImageUrl(response.data.message);
-      setRandomImageUrl(""); // Clear random image URL
+      setRandomImageUrl("");
     } catch (error) {
       console.error(error);
     } finally {
@@ -44,7 +44,6 @@ const ImageGenerator = () => {
     }
   };
 
-  // Calculate the length of the prompt
   const letterCount = prompt.length;
 
   return (
@@ -65,8 +64,12 @@ const ImageGenerator = () => {
         )}
         {imageUrl && (
           <div>
-            <h2>Generated Image:</h2>
-            <img src={imageUrl} alt="Generated" style={{ maxWidth: "100%" }} />
+            <h2 style={{ color: "#fff" }}>Generated Image:</h2>
+            <img
+              src={imageUrl}
+              alt="Generated"
+              style={{ maxWidth: "100%", color: "#fff" }}
+            />
           </div>
         )}
         <Box className={classes.formContainer}>
@@ -139,8 +142,8 @@ const useStyles = makeStyles({
     fontSize: "1rem",
     border: "1px solid #ccc",
     borderRadius: "4px",
-    width: "500px", // Increase the width as desired
-    height: "42px !important", // Increase the height as desired
+    width: "500px",
+    height: "42px !important",
   },
   letterCount: {
     position: "absolute",
