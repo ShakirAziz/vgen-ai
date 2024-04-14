@@ -16,6 +16,13 @@ const FormBase = ({
   handleSubmit,
 }) => {
   const classes = useStyles();
+
+  // Function to initiate Google OAuth
+  const handleGoogleSignIn = () => {
+    // Redirect the user to the backend route responsible for initiating Google OAuth
+    window.location.href = "/auth/google";
+  };
+
   return (
     <Paper elevation={4} className={classes.formContainer}>
       <Typography className={classes.formCaption}>{title}</Typography>
@@ -41,15 +48,14 @@ const FormBase = ({
           <Button
             variant="contained"
             type="submit"
-            onClick={e => console.log("submited")}
+            onClick={(e) => console.log("submited")}
           >
             {buttonText}
           </Button>
           <Typography className={classes.middleText}>OR</Typography>
           <Button
             className={classes.button}
-            component={Link}
-            to="/"
+            onClick={handleGoogleSignIn} // Call the function to initiate Google OAuth
             startIcon={<FcGoogle />}
           >
             Sign in with Google
@@ -67,7 +73,7 @@ const FormBase = ({
 
 export default FormBase;
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   formContainer: {
     padding: "2rem",
     textAlign: "center",
